@@ -1,6 +1,12 @@
 const paths = {
     logicExercises: '/logic-exercises',
-    landing: '/landing',
+    landing: {
+        index: '/easybank',
+        about: '/easybank/about',
+        contact: '/easybank/contact',
+        blog: '/easybank/blog',
+        carrers: '/easybank/carrers',
+    },
 };
 
 export default paths;
