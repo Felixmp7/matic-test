@@ -11,7 +11,14 @@ module.exports = {
         './src/UI/**/*.{js,ts,jsx,tsx}',
     ],
     theme: {
-        extend: {},
+        extend: {
+            colors: {
+                'primary-green': '#31CF72',
+                'primary-cyan': '#2CBAC7',
+                'primary-gray': '#959499',
+                'primary-dark-blue': '#2D314E',
+            },
+        },
     },
     plugins: [],
 };
