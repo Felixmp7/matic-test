@@ -1,11 +1,11 @@
-import MaxContainer from '@templates/layouts/MainLayout';
+import Layout from '@templates/layouts/Layout';
 import type { NextPage } from 'next';
 import LogicalExercises from 'src/logicalExercises';
 
 const LogicTestPage: NextPage = () => (
-    <MaxContainer headerTitle="Logic Test Page">
+    <Layout headerTitle="Logic Test Page">
         <LogicalExercises />
-    </MaxContainer>
+    </Layout>
 );
 
 export default LogicTestPage;
