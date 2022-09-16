@@ -1,16 +1,16 @@
 import paths from '@helpers/paths';
-import MaxContainer from '@templates/layouts/MainLayout';
+import Layout from '@templates/layouts/Layout';
 import type { NextPage } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
 import logo from 'public/assets/logo/gray.png';
 
 const Home: NextPage = () => (
-    <MaxContainer
+    <Layout
         headerTitle="Home"
-        className="grid place-items-center bg-gradient-to-br from-slate-100 to-slate-300 h-screen w-full"
+        className="grid w-full h-screen place-items-center bg-gradient-to-br from-slate-100 to-slate-300"
     >
-        <div className=" text-center">
+        <div className="text-center ">
             <Image
                 src={logo}
                 width={100}
@@ -18,18 +18,18 @@ const Home: NextPage = () => (
             />
             <div className="mt-4">
                 <Link href={paths.logicExercises}>
-                    <a className="hover:underline hover:text-blue-700 mr-10">
+                    <a className="mr-10 hover:underline hover:text-blue-700">
                         Ejercicios de lógica
                     </a>
                 </Link>
-                <Link href={paths.logicExercises}>
+                <Link href={paths.landing.index}>
                     <a className="hover:underline hover:text-green-700">
                         Landing Page
                     </a>
                 </Link>
             </div>
         </div>
-    </MaxContainer>
+    </Layout>
 );
 
 export default Home;
