@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;700;900&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -17,7 +17,7 @@ a {
 
 * {
   box-sizing: border-box;
-  font-family: 'Lato', sans-serif;
+  font-family: 'Public-Sans', sans-serif;
 }
 
 input:-webkit-autofill,
@@ -40,8 +40,12 @@ input:-webkit-autofill:active {
 */
 
 @layer utilities {
-  .container {
+  .max-container {
     max-width: 1696px;
+    margin: auto;
+  }
+  .landing-container {
+    max-width: 1112px;
     margin: auto;
   }
 
