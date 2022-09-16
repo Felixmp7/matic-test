@@ -6,6 +6,7 @@ module.exports = {
     },
     content: [
         './src/pages/**/*.{js,ts,jsx,tsx}',
+        './src/logicalExercises/**/*.{js,ts,jsx,tsx}',
         './src/templates/**/*.{js,ts,jsx,tsx}',
         './src/UI/**/*.{js,ts,jsx,tsx}',
     ],

@@ -3,11 +3,11 @@ import FizzBuzzExercise from './FizzBuzzExercise';
 import WordsCounterExercise from './WordsCounterExercise';
 
 const LogicalExercises = () => (
-    <section className="grid grid-cols-3 gap-x-5 mx-auto border w-4/5 mt-10">
+    <div className="grid w-4/5 grid-cols-3 mx-auto mt-10 gap-x-5">
         <FibonacciExercise />
         <WordsCounterExercise />
         <FizzBuzzExercise />
-    </section>
+    </div>
 );
 
 export default LogicalExercises;

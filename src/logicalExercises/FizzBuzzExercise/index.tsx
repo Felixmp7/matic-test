@@ -14,8 +14,8 @@ const FizzBuzzExercise = () => {
                 and 5, by the word "fizz buzz".
             `}
         >
-            <ul className="text-[8px] text-slate-600">
-                {fizzBuzLogs.map((value, index) => <li className=" " key={index}>{value}</li>)}
+            <ul className="text-xs text-slate-600">
+                {fizzBuzLogs.map((value, index) => <li className="" key={index}>{value}</li>)}
             </ul>
         </LogicExercise>
     );
