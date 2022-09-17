@@ -46,7 +46,7 @@ const WhyChoose = () => (
             Control your finances like never before.
         </p>
 
-        <div className="grid w-full grid-cols-4 gap-[39px] mt-[82px]">
+        <div className="grid w-full grid-cols-4 gap-11 mt-[82px]">
             {options.map((option, index) => (
                 <WhyChooseOption key={index} {...option} />
             ))}
