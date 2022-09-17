@@ -23,7 +23,7 @@
       "@organisms/*": ["src/UI/organisms/*"],
       "@services/*": ["src/services/*"],
       "@helpers/*": ["src/helpers/*"],
-      "@contexts/*": ["src/contexts/*"],
+      "@context/*": ["src/context/*"],
       "@types": ["src/types"],
     },
   },
