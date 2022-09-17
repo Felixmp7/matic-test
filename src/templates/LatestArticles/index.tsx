@@ -1,30 +1,27 @@
-import useSWR from 'swr';
-import PrimaryButton from '@atoms/PrimaryButton';
-import SectionTitle from '@atoms/SectionTitle';
+import ArticlesContextProvider from '@context/ArticlesContext';
 import SectionLayout from '@templates/layouts/SectionLayout';
-import API from '@services/api';
-import LatestArticles from '@organisms/LatestArticles';
+import ArticleForm from './ArticleForm';
+import LatestArticlesSection from './LatestArticleSection';
+import useArticles from './useArticles';
 
-const fetchArticles = () => API.public.getAllArticles();
-
-const LatestArticlesSection = () => {
-    const { data: fetchResponse, isValidating } = useSWR('articles', fetchArticles, {
-        revalidateOnFocus: false,
-    });
-
-    const articles = fetchResponse?.data && fetchResponse.data.slice(0, 4);
+const ArticlesSection = () => {
+    const {
+        articles, isLoading, showForm, openArticlesForm, mutateLatestArticles,
+    } = useArticles();
 
     return (
-        <SectionLayout sectionClassName="bg-[#FAFAFA]">
-            <div className="flex items-center justify-between mb-[38px]">
-                <SectionTitle title="Latest Articles" />
-                <PrimaryButton>
-                    + Add New Article
-                </PrimaryButton>
-            </div>
-            <LatestArticles articles={articles} isLoading={isValidating} />
-        </SectionLayout>
+        <ArticlesContextProvider>
+            <SectionLayout sectionClassName="bg-[#f9f9f9]">
+                {showForm && <ArticleForm mutateLatestArticles={mutateLatestArticles} />}
+                <LatestArticlesSection
+                    articles={articles}
+                    isLoading={isLoading}
+                    isArticlesFormVisible={showForm}
+                    openArticlesForm={openArticlesForm}
+                />
+            </SectionLayout>
+        </ArticlesContextProvider>
     );
 };
 
-export default LatestArticlesSection;
+export default ArticlesSection;
