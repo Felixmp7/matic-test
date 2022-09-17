@@ -1,6 +1,6 @@
 const apiRoutes = {
     publicRoutes: {
-        getAllArticles: 'articles',
+        articles: 'articles',
     },
 };
 
