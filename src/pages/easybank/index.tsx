@@ -1,5 +1,5 @@
 import Footer from '@organisms/Footer';
-import WhyChoose from '@organisms/WhyChoose';
+import WhyChooseSection from '@templates/WhyChooseSection';
 import HeroSection from '@templates/HeroSection';
 import Layout from '@templates/layouts/Layout';
 import type { NextPage } from 'next';
@@ -7,7 +7,7 @@ import type { NextPage } from 'next';
 const EasyBankHomePage: NextPage = () => (
     <Layout headerTitle="EasyBank" className="overflow-hidden">
         <HeroSection />
-        <WhyChoose />
+        <WhyChooseSection />
         <Footer />
     </Layout>
 );
