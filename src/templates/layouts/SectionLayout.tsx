@@ -2,13 +2,14 @@ import clsx from 'clsx';
 import { ReactNode } from 'react';
 
 type Props = {
-    className?:string,
+    sectionClassName?:string,
+    landingContainerClassName?:string,
     children: ReactNode
 }
 
-const SectionLayout = ({ children, className }: Props) => (
-    <section className={clsx('py-24', className)}>
-        <div className="landing-container">
+const SectionLayout = ({ children, landingContainerClassName, sectionClassName }: Props) => (
+    <section className={clsx('py-24', sectionClassName)}>
+        <div className={clsx('landing-container', landingContainerClassName)}>
             {children}
         </div>
     </section>
