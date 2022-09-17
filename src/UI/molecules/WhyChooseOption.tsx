@@ -1,6 +1,5 @@
-import { ChooseOption } from '@organisms/WhyChoose';
 import Image from 'next/image';
-import React from 'react';
+import { ChooseOption } from '@templates/WhyChooseSection';
 
 const WhyChooseOption = ({ imageSrc, title, description }: ChooseOption) => (
     <div>
