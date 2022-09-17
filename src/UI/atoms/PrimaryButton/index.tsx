@@ -17,7 +17,7 @@ const PrimaryButton = ({
         type={type ?? 'button'}
         className={
             clsx(
-                'px-6 h-[45px] rounded-full text-white',
+                'px-6 h-[45px] rounded-full text-white hover:from-primary-green hover:to-primary-cyan',
                 isActive
                     ? 'bg-gradient-to-r from-primary-green to-primary-cyan'
                     : 'bg-gradient-to-r from-secondary-green to-secondary-cyan',
