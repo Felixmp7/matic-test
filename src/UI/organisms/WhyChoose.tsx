@@ -37,7 +37,7 @@ const options: ChooseOption[] = [
 ];
 
 const WhyChoose = () => (
-    <SectionLayout className="bg-[#F4F5F7]">
+    <SectionLayout sectionClassName="bg-[#F4F5F7]">
         <SectionTitle title="Why choose Easybank?" />
         <p className="text-[17px] leading-[25px] text-primary-gray font-light mt-5">
             We leverage Open Banking to turn your bank acount into your financial hub.
