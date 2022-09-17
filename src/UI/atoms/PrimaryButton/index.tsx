@@ -1,12 +1,29 @@
 import clsx from 'clsx';
 import { ComponentProps } from 'react';
 
-const PrimaryButton = ({ type, children, ...rest }: ComponentProps<'button'>) => (
+type Props = ComponentProps<'button'> & {
+    isActive?: boolean
+}
+
+const PrimaryButton = ({
+    type,
+    children,
+    isActive,
+    ...rest
+}: Props) => (
     <button
         {...rest}
         // eslint-disable-next-line react/button-has-type
         type={type ?? 'button'}
-        className={clsx('bg-gradient-to-r from-primary-green to-primary-cyan px-6 h-[45px] rounded-full text-white', rest.className)}
+        className={
+            clsx(
+                'px-6 h-[45px] rounded-full text-white',
+                isActive
+                    ? 'bg-gradient-to-r from-primary-green to-primary-cyan'
+                    : 'bg-gradient-to-r from-secondary-green to-secondary-cyan',
+                rest.className,
+            )
+        }
     >
         {children || 'Request Invite'}
     </button>
