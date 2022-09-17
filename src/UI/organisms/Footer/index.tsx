@@ -32,7 +32,7 @@ const Footer = () => (
                 </ul>
             </div>
             <div className="pl-4 text-right">
-                <PrimaryButton />
+                <PrimaryButton isActive />
                 <span
                     className="block text-white mt-7 -tracking-[0.01em]"
                 >

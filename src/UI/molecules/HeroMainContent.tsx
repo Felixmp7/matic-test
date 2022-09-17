@@ -6,7 +6,7 @@ const HeroMainContent = () => (
     <div className="inline-block">
         <HeroTitle />
         <HeroDescription />
-        <PrimaryButton />
+        <PrimaryButton isActive />
     </div>
 );
 

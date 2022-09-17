@@ -50,7 +50,7 @@ const Navbar = () => {
                     );
                 })}
             </nav>
-            <PrimaryButton type="button" />
+            <PrimaryButton isActive />
         </header>
     );
 };
