@@ -13,4 +13,8 @@ export type Article = {
     updatedAt: DateString
 }
 
-export type Article_ResT = Article[]
+export type FormArticle_ReqT = {
+    author: string,
+    title: string,
+    content: string,
+}
