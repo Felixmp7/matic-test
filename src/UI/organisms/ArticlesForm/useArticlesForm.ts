@@ -5,7 +5,7 @@ import API from '@services/api';
 import { createSuccessResponseCode, generalSuccessResponseCode } from '@helpers/constants';
 import { FormArticle_ReqT } from '@services/api/clients/public/interfaces';
 import { useEffect } from 'react';
-import useArticleContext from './hooks/useArticlesContext';
+import useArticleContext from '../../../templates/LatestArticles/hooks/useArticlesContext';
 
 const parseArticleData = (articleData: ArticleFormSchema):FormArticle_ReqT => ({
     author: articleData.author,
@@ -19,7 +19,6 @@ const handleCreateNewArticle = async (newArticle: ArticleFormSchema) => {
         const response = await API.public.createNewArticle(newArticleParsed);
         return response.statusCode === createSuccessResponseCode;
     } catch (error) {
-        console.log(error);
         return false;
     }
 };
@@ -30,7 +29,6 @@ const handleUpdateArticle = async (article: ArticleFormSchema, articleId: string
         const response = await API.public.updateArticle(articleParsed, articleId);
         return response.statusCode === generalSuccessResponseCode;
     } catch (error) {
-        console.log(error);
         return false;
     }
 };

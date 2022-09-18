@@ -1,9 +1,9 @@
 import ArticlesContextProvider from '@context/ArticlesContext';
 import SectionLayout from '@templates/layouts/SectionLayout';
-import ArticleForm from './ArticleForm';
-import PreviousArticles from './PreviousArticles';
+import ArticleFormSection from './ArticleFormSection';
+import PreviousArticlesSection from './PreviousArticlesSection';
 import LatestArticlesSection from './LatestArticleSection';
-import useArticles from './useArticles';
+import useArticles from './hooks/useArticles';
 
 const ArticlesSection = () => {
     const {
@@ -20,8 +20,8 @@ const ArticlesSection = () => {
             <SectionLayout sectionClassName="bg-[#f9f9f9]">
                 {showForm && (
                     <>
-                        <ArticleForm mutateLatestArticles={mutateLatestArticles} />
-                        <PreviousArticles
+                        <ArticleFormSection mutateLatestArticles={mutateLatestArticles} />
+                        <PreviousArticlesSection
                             articles={allArticles}
                             mutateLatestArticles={mutateLatestArticles}
                         />

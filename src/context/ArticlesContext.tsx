@@ -1,5 +1,5 @@
 import React, { createContext, useMemo, useState } from 'react';
-import { ArticleFormSchema } from '@templates/LatestArticles/useArticlesForm';
+import { ArticleFormSchema } from '@organisms/ArticlesForm/useArticlesForm';
 
 type DefaultFormValues = ArticleFormSchema & {
     id: string,

@@ -7,7 +7,7 @@ type Props = {
     mutateLatestArticles: () => void,
 }
 
-const PreviousArticles = ({ articles, mutateLatestArticles }: Props) => (
+const PreviousArticlesSection = ({ articles, mutateLatestArticles }: Props) => (
     <section className="bg-[#F9F9F9] mb-24">
         <SectionTitle title="Previous Articles" />
         <p className="text-[17px] leading-[25px] text-primary-gray font-light mt-5 mb-[72px]">
@@ -17,4 +17,4 @@ const PreviousArticles = ({ articles, mutateLatestArticles }: Props) => (
     </section>
 );
 
-export default PreviousArticles;
+export default PreviousArticlesSection;
