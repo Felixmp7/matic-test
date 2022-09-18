@@ -14,12 +14,13 @@ const useArticles = () => {
 
     const articlesSorted = fetchResponse?.data && sortByDate(fetchResponse.data);
 
-    const articles = articlesSorted && articlesSorted.slice(0, 4);
+    const lastArticles = articlesSorted && articlesSorted.slice(0, 4);
 
     return {
         isLoading: isValidating,
         showForm,
-        articles,
+        allArticles: articlesSorted,
+        lastArticles,
         openArticlesForm: () => setShowForm(true),
         mutateLatestArticles: mutate,
     };
