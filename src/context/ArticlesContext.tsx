@@ -1,9 +1,13 @@
-import { ArticleFormSchema } from '@templates/LatestArticles/useArticlesForm';
 import React, { createContext, useMemo, useState } from 'react';
+import { ArticleFormSchema } from '@templates/LatestArticles/useArticlesForm';
+
+type DefaultFormValues = ArticleFormSchema & {
+    id: string,
+}
 
 export interface ArticleContextProps {
-    defaultFormValues?: ArticleFormSchema;
-    setDefaultFormValues: React.Dispatch<ArticleFormSchema>;
+    defaultFormValues?: DefaultFormValues;
+    setDefaultFormValues: React.Dispatch<DefaultFormValues | undefined>;
 }
 
 export const ArticleContext = createContext<ArticleContextProps>({
@@ -16,9 +20,9 @@ type Props = {
 };
 
 const ArticlesContextProvider = ({ children }: Props) => {
-    const [defaultFormValues, setDefaultFormValues] = useState<ArticleFormSchema | undefined>();
+    const [defaultFormValues, setDefaultFormValues] = useState<DefaultFormValues | undefined>();
 
-    const values = useMemo(() => ({ defaultFormValues, setDefaultFormValues }), [defaultFormValues, setDefaultFormValues]);
+    const values = useMemo(() => ({ defaultFormValues, setDefaultFormValues }), [defaultFormValues]);
 
     return (
         <ArticleContext.Provider value={values}>
