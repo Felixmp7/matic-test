@@ -5,17 +5,24 @@ type Props = {
     text: string,
     icon: StaticImageData,
     alt: string,
+    isDisabled?: boolean,
     reverseMode?: boolean,
     onClick: () => void,
 }
 
 const PaginationButton = ({
-    text, icon, alt, reverseMode, onClick,
+    text, icon, alt, reverseMode, isDisabled, onClick,
 }: Props) => (
     <button
         type="button"
         onClick={onClick}
-        className={clsx(reverseMode ? 'flex-row-reverse' : 'flex-row', 'flex items-center')}
+        disabled={isDisabled}
+        className={clsx(
+            'flex items-center',
+            isDisabled && 'cursor-not-allowed',
+            reverseMode
+                ? 'flex-row-reverse' : 'flex-row',
+        )}
     >
         <Image
             src={icon}
