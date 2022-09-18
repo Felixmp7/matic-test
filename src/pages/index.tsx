@@ -10,20 +10,22 @@ const Home: NextPage = () => (
         headerTitle="Home"
         className="grid w-full h-screen place-items-center bg-gradient-to-br from-slate-100 to-slate-300"
     >
-        <div className="text-center ">
+        <div className="text-center">
             <Image
                 src={logo}
+                alt="Felix logo"
                 width={100}
                 height={100}
             />
-            <div className="mt-4">
+            <span className="block text-xl font-light text-slate-700">Felix Pacheco | React Developer</span>
+            <div className="mt-10">
                 <Link href={paths.logicExercises}>
-                    <a className="mr-10 hover:underline hover:text-blue-700">
+                    <a className="mr-10 hover:underline hover:text-blue-500">
                         Ejercicios de lógica
                     </a>
                 </Link>
                 <Link href={paths.landing.index}>
-                    <a className="hover:underline hover:text-green-700">
+                    <a className="hover:underline hover:text-green-500">
                         Landing Page
                     </a>
                 </Link>
