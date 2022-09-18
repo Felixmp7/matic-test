@@ -1,2 +1,2 @@
-// eslint-disable-next-line import/prefer-default-export
 export const createSuccessResponseCode = 201;
+export const generalSuccessResponseCode = 200;
