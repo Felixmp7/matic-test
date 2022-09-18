@@ -20,7 +20,8 @@ const Pagination = ({ currentPage, totalPages, handleSetCurrentPage }: Props) =>
                 text="Previous"
                 alt="Previous icon"
                 icon={arrowLeftIcon}
-                onClick={currentPage > 0 ? () => handleSetCurrentPage(currentPage - 1) : () => null}
+                isDisabled={currentPage <= 0}
+                onClick={() => handleSetCurrentPage(currentPage - 1)}
             />
             <ul className="inline-flex -space-x-px">
                 {allPages.map((_, index) => {
@@ -47,7 +48,8 @@ const Pagination = ({ currentPage, totalPages, handleSetCurrentPage }: Props) =>
                 alt="Next icon"
                 reverseMode
                 icon={arrowRightIcon}
-                onClick={currentPage < totalPages - 1 ? () => handleSetCurrentPage(currentPage + 1) : () => null}
+                isDisabled={currentPage >= totalPages - 1}
+                onClick={() => handleSetCurrentPage(currentPage + 1)}
             />
         </nav>
     );
