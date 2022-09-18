@@ -14,16 +14,16 @@ const useFizzBuzz = () => {
     useEffect(() => {
         const interval = setInterval(() => {
             setCount(count + 1);
-        }, 200);
+        }, 100);
 
-        if (count === 100) {
+        if (count === 101) {
             clearInterval(interval);
         }
         return () => clearInterval(interval);
     }, [count]);
 
     useEffect(() => {
-        if (count < 100 && count > 0) {
+        if (count <= 100 && count > 0) {
             fizzBuzzLogs.push(getFizzBuzz(count));
             setFizzBuzzLogs(fizzBuzzLogs);
         }
