@@ -11,7 +11,7 @@ type Props = {
 
 const ArticlesTable = ({ articles, mutateLatestArticles }: Props) => {
     const { results, rowsPerPage } = useArticlesTable(articles);
-    const { currentPage, totalPages, handleSetCurrentPage } = usePagination(articles);
+    const { currentPage, totalPages, handleSetCurrentPage } = usePagination(articles, rowsPerPage);
 
     const resultsPerPage = results.slice(currentPage * rowsPerPage, (currentPage * rowsPerPage) + rowsPerPage);
 
