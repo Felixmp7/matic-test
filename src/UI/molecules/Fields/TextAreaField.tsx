@@ -1,7 +1,6 @@
 import ErrorMessage from '@atoms/ErrorMessage';
 import Label from '@atoms/Label';
-import clsx from 'clsx';
-import { inputStyles } from './FieldUtils';
+import TextArea from '@atoms/TextArea';
 
 type Props = {
     id: string,
@@ -9,14 +8,11 @@ type Props = {
     fieldProps: any,
     errorMessage?: string,
     containerClasses?: string,
-    length?: number,
-    maxLength?: number,
 }
 
 const TextAreaField = ({
     id,
     fieldProps,
-    maxLength,
     label,
     errorMessage,
     containerClasses,
@@ -24,20 +20,10 @@ const TextAreaField = ({
     <div className={`${containerClasses || ''} w-full`}>
         <div className="relative leading-none">
             <Label id={id} label={label} />
-            <textarea
-                {...fieldProps}
+            <TextArea
                 id={id}
-                maxLength={maxLength}
-                rows={3}
-                className={
-                    clsx(
-                        'resize-y max-h-80 min-h-40',
-                        inputStyles.basic,
-                        errorMessage
-                            ? inputStyles.error
-                            : inputStyles.noError,
-                    )
-                }
+                fieldProps={fieldProps}
+                error={errorMessage}
             />
         </div>
         {errorMessage && <ErrorMessage errorMessage={errorMessage} />}
