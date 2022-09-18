@@ -10,6 +10,12 @@ const authApiMethods = {
     createNewArticle: async (newArticle: FormArticle_ReqT) => (
         await network.post<CustomResponse<Article>>(publicRoutes.articles, newArticle)
     ).data,
+    updateArticle: async (article: FormArticle_ReqT, articleId: string) => (
+        await network.patch<CustomResponse<Article>>(`${publicRoutes.articles}/${articleId}`, article)
+    ).data,
+    deleteArticle: async (articleId: string) => (
+        await network.delete<CustomResponse<Article>>(`${publicRoutes.articles}/${articleId}`)
+    ).data,
 };
 
 export default authApiMethods;
