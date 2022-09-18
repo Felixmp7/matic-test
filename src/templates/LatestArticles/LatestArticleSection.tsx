@@ -1,4 +1,4 @@
-import PrimaryButton from '@atoms/PrimaryButton';
+import PrimaryButton from '@atoms/Buttons/PrimaryButton';
 import SectionTitle from '@atoms/SectionTitle';
 import LatestArticles from '@organisms/LatestArticles';
 import { Article } from '@services/api/clients/public/interfaces';

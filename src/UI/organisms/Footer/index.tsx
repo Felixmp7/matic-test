@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import easyBankLogo from 'public/assets/logo/easybank-logo-white.svg';
 import SocialMediaLink from '@atoms/SocialMediaLink';
-import PrimaryButton from '@atoms/PrimaryButton';
+import PrimaryButton from '@atoms/Buttons/PrimaryButton';
 import Link from 'next/link';
 import { socialLinks, footerLinks } from './helpers';
 

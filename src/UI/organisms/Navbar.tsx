@@ -1,4 +1,4 @@
-import PrimaryButton from '@atoms/PrimaryButton';
+import PrimaryButton from '@atoms/Buttons/PrimaryButton';
 import paths from '@helpers/paths';
 import clsx from 'clsx';
 import Image from 'next/image';

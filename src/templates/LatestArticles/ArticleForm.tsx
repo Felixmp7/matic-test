@@ -1,5 +1,5 @@
-import PrimaryButton from '@atoms/PrimaryButton';
 import SectionTitle from '@atoms/SectionTitle';
+import PrimaryButton from '@atoms/Buttons/PrimaryButton';
 import TextAreaField from '@molecules/Fields/TextAreaField';
 import TextField from '@molecules/Fields/TextField';
 import useArticlesForm from './useArticlesForm';
@@ -9,9 +9,8 @@ type Props = {
 }
 
 const ArticleForm = ({ mutateLatestArticles }: Props) => {
-    const {
-        handleSubmit, register, errors,
-    } = useArticlesForm(mutateLatestArticles);
+    const { errors, handleSubmit, register } = useArticlesForm(mutateLatestArticles);
+
     return (
         <section className="bg-[#F9F9F9]">
             <SectionTitle title="Add New Blog Article" />
