@@ -50,7 +50,7 @@ const Table = ({ results, mutateLatestArticles }: Props) => {
                                     <button
                                         type="button"
                                         onClick={() => handleEditArticle(article)}
-                                        className="text-green-500"
+                                        className="text-secondary-green"
                                     >
                                         Edit
                                     </button>
