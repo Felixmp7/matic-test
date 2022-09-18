@@ -20,7 +20,7 @@ const handleDeleteArticle = async ({ articleId, mutateLatestArticles }: Props) =
 const DeleteArticle = ({ articleId, mutateLatestArticles }: Props) => (
     <button
         type="button"
-        className="text-red-500"
+        className="text-primary-red"
         onClick={() => handleDeleteArticle({ articleId, mutateLatestArticles })}
     >
         Delete
