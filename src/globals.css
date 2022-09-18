@@ -29,16 +29,6 @@ input:-webkit-autofill:active {
   border-color: #e7e8ea;
 }
 
-/* .no-scrollbar::-webkit-scrollbar {
-    display: none;
-}
-
-.no-scrollbar {
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-}
-*/
-
 @layer utilities {
   .max-container {
     max-width: 1696px;
@@ -48,20 +38,4 @@ input:-webkit-autofill:active {
     max-width: 1112px;
     margin: auto;
   }
-
-  /* .scrollbar::-webkit-scrollbar {
-    width: 3px;
-  }
-
-  .scrollbar::-webkit-scrollbar-track {
-    @apply rounded-full bg-slate-50;
-  }
-
-  .scrollbar::-webkit-scrollbar-thumb {
-    @apply rounded-full bg-slate-200;
-  }
-
-  .scrollbar::-webkit-scrollbar-thumb:hover {
-    @apply bg-slate-300;
-  } */
 }
