@@ -23,6 +23,7 @@ module.exports = {
                 'primary-gray-300': '#D1D5DB',
                 'primary-gray-400': '#F4F5F7',
                 'primary-gray-500': '#6B7280',
+                'primary-red': '#FF8A8A',
                 'primary-dark-blue': '#2D314E',
             },
         },
