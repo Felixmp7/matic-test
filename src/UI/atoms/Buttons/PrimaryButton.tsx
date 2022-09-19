@@ -29,7 +29,7 @@ const PrimaryButton = ({
         }
     >
         {(() => {
-            if (isLoading) return <Spinner className="grid h-full place-items-center" />;
+            if (isLoading) return <Spinner containerClassName="grid h-full place-items-center" />;
             return children || 'Request Invite';
         })()}
     </button>
