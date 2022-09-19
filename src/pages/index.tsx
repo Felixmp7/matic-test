@@ -20,12 +20,12 @@ const Home: NextPage = () => (
             <span className="block text-xl font-light text-slate-700">Felix Pacheco | React Developer</span>
             <div className="mt-10">
                 <Link href={paths.logicExercises}>
-                    <a className="mr-10 hover:underline hover:text-blue-500">
+                    <a className="inline-block px-5 py-10 mr-10 text-blue-400 bg-blue-200 rounded shadow w-52 hover:bg-blue-300 hover:text-blue-100">
                         Ejercicios de lógica
                     </a>
                 </Link>
                 <Link href={paths.landing.index}>
-                    <a className="hover:underline hover:text-green-500">
+                    <a className="inline-block px-5 py-10 text-green-400 bg-green-200 rounded shadow w-52 hover:bg-green-300 hover:text-green-100">
                         Landing Page
                     </a>
                 </Link>
