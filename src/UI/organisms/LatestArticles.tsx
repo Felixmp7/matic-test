@@ -1,8 +1,8 @@
 import Article from '@molecules/Article';
-import { Article_ResT } from '@services/api/clients/public/interfaces';
+import { Article_BM } from '@services/api/clients/public/interfaces';
 
 type Props = {
-    articles?: Article_ResT,
+    articles?: Article_BM[],
     isLoading: boolean
 }
 

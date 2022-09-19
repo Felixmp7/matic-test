@@ -1,7 +1,7 @@
-import { Article } from '@services/api/clients/public/interfaces';
+import { Article_BM } from '@services/api/clients/public/interfaces';
 import { useState } from 'react';
 
-const usePagination = (articles: Article[], rowsPerPage: number) => {
+const usePagination = (articles: Article_BM[], rowsPerPage: number) => {
     const [currentPage, setCurrentPage] = useState(0);
     const totalPages = Math.ceil(articles.length / rowsPerPage);
 

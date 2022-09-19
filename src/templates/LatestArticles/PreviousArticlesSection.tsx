@@ -1,9 +1,9 @@
 import SectionTitle from '@atoms/SectionTitle';
 import ArticlesTable from '@organisms/ArticlesTable';
-import { Article } from '@services/api/clients/public/interfaces';
+import { Article_BM } from '@services/api/clients/public/interfaces';
 
 type Props = {
-    articles?: Article[],
+    articles?: Article_BM[],
     mutateLatestArticles: () => void,
 }
 

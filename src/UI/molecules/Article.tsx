@@ -1,12 +1,12 @@
 import Image from 'next/image';
-import { Article } from '@services/api/clients/public/interfaces';
+import { Article_BM } from '@services/api/clients/public/interfaces';
 
 const ArticleItem = ({
     imageUrl,
     author,
     content,
     title,
-}:Article) => (
+}:Article_BM) => (
     <article className="overflow-hidden bg-white rounded-lg">
         <header className="relative w-full h-40">
             <Image

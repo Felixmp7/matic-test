@@ -1,11 +1,11 @@
 import Pagination from '@molecules/Pagination';
 import Table from '@molecules/Table';
-import { Article } from '@services/api/clients/public/interfaces';
+import { Article_BM } from '@services/api/clients/public/interfaces';
 import useArticlesTable from './useArticlesTable';
 import usePagination from './usePagination';
 
 type Props = {
-    articles: Article[],
+    articles: Article_BM[],
     mutateLatestArticles: () => void,
 }
 

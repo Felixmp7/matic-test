@@ -1,10 +1,10 @@
 import PrimaryButton from '@atoms/Buttons/PrimaryButton';
 import SectionTitle from '@atoms/SectionTitle';
 import LatestArticles from '@organisms/LatestArticles';
-import { Article } from '@services/api/clients/public/interfaces';
+import { Article_BM } from '@services/api/clients/public/interfaces';
 
 type Props = {
-    articles?: Article[],
+    articles?: Article_BM[],
     isLoading: boolean,
     isArticlesFormVisible: boolean,
     openArticlesForm: () => void,

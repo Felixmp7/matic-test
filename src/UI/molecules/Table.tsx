@@ -1,18 +1,18 @@
 import clsx from 'clsx';
 import DeleteArticle from '@atoms/DeleteArticle';
-import { Article } from '@services/api/clients/public/interfaces';
+import { Article_BM } from '@services/api/clients/public/interfaces';
 import useArticleContext from '@templates/LatestArticles/hooks/useArticlesContext';
 import { parseDate } from '@helpers/dates';
 
 type Props = {
-    results: Article[],
+    results: Article_BM[],
     mutateLatestArticles: () => void,
 }
 
 const Table = ({ results, mutateLatestArticles }: Props) => {
     const { setDefaultFormValues } = useArticleContext();
 
-    const handleEditArticle = (article: Article) => {
+    const handleEditArticle = (article: Article_BM) => {
         const defaultValues = {
             id: article.id,
             author: article.author,
