@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 
-const getFizzBuzz = (numb: number) => {
+export const getFizzBuzz = (numb: number) => {
     if (numb % 15 === 0) return 'fizzbuzz';
     if (numb % 3 === 0) return 'fizz';
     if (numb % 5 === 0) return 'buzz';
