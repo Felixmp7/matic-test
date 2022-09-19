@@ -4,7 +4,10 @@ type WordMap = {
     [key: string]: number
 }
 
-const countRepeatedWords = (sentence: string) => {
+export const countRepeatedWords = (sentence: string) => {
+    if (sentence === '') {
+        return {};
+    }
     const strStripped = sentence.replace(/[,.!?]/g, '');
     const words = strStripped.toLowerCase().split(' ');
     const wordMap: WordMap = {};
