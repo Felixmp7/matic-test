@@ -8,7 +8,9 @@ type Props = {
 }
 
 const ArticleForm = ({ mutateLatestArticles }: Props) => {
-    const { errors, handleSubmit, register } = useArticlesForm(mutateLatestArticles);
+    const {
+        errors, isSubmitting, handleSubmit, register,
+    } = useArticlesForm(mutateLatestArticles);
 
     return (
         <form
@@ -35,7 +37,7 @@ const ArticleForm = ({ mutateLatestArticles }: Props) => {
                 containerClasses="my-4"
                 errorMessage={errors.blogContent?.message}
             />
-            <PrimaryButton type="submit" className="w-full">
+            <PrimaryButton type="submit" className="w-full" isLoading={isSubmitting} disabled={isSubmitting}>
                 Save
             </PrimaryButton>
         </form>
