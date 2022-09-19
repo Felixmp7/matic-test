@@ -6,7 +6,7 @@ const isPerfectSquare = (num: number) => {
     return (square * square == num);
 };
 
-const isFibonacci = (num = 0) => {
+export const isFibonacci = (num = 0) => {
     if (isPerfectSquare(5 * (num * num) - 4) || isPerfectSquare(5 * (num * num) + 4)) {
         return true;
     }
