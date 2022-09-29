@@ -6,10 +6,9 @@ import { parseDate } from '@helpers/dates';
 
 type Props = {
     results: Article_BM[],
-    mutateLatestArticles: () => void,
 }
 
-const Table = ({ results, mutateLatestArticles }: Props) => {
+const Table = ({ results }: Props) => {
     const { setDefaultFormValues } = useArticleContext();
 
     const handleEditArticle = (article: Article_BM) => {
@@ -45,7 +44,6 @@ const Table = ({ results, mutateLatestArticles }: Props) => {
                                 <td className="py-3 pl-6 space-x-4">
                                     <DeleteArticle
                                         articleId={article.id}
-                                        mutateLatestArticles={mutateLatestArticles}
                                     />
                                     <button
                                         type="button"

@@ -1,6 +1,7 @@
-import { generalSuccessResponseCode } from '@helpers/constants';
+import { generalSuccessResponseCode, SWR_ARTICLES_KEY } from '@helpers/constants';
 import API from '@services/api';
 import { useState } from 'react';
+import { mutate } from 'swr';
 import Spinner from './Spinner';
 
 const deleteArticle = async (articleId: string) => {
@@ -14,17 +15,16 @@ const deleteArticle = async (articleId: string) => {
 
 type Props = {
     articleId: string,
-    mutateLatestArticles: () => void,
 }
 
-const DeleteArticle = ({ articleId, mutateLatestArticles }: Props) => {
+const DeleteArticle = ({ articleId }: Props) => {
     const [isSubmitting, setIsSubmitting] = useState(false);
 
     const handleDeleteArticle = async () => {
         setIsSubmitting(true);
         const fetchSucceded = await deleteArticle(articleId);
         if (fetchSucceded) {
-            mutateLatestArticles();
+            mutate(SWR_ARTICLES_KEY);
         }
         setIsSubmitting(false);
     };

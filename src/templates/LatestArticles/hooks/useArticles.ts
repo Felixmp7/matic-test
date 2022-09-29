@@ -2,13 +2,14 @@ import useSWR from 'swr';
 import API from '@services/api';
 import { useState } from 'react';
 import { sortByDate } from '@helpers/dates';
+import { SWR_ARTICLES_KEY } from '@helpers/constants';
 
 const fetchArticles = () => API.public.getAllArticles();
 
 const useArticles = () => {
     const [showForm, setShowForm] = useState(false);
 
-    const { data: fetchResponse, isValidating, mutate } = useSWR('articles', fetchArticles, {
+    const { data: fetchResponse, isValidating } = useSWR(SWR_ARTICLES_KEY, fetchArticles, {
         revalidateOnFocus: false,
     });
 
@@ -22,7 +23,6 @@ const useArticles = () => {
         allArticles: articlesSorted,
         lastArticles,
         openArticlesForm: () => setShowForm(true),
-        mutateLatestArticles: mutate,
     };
 };
 

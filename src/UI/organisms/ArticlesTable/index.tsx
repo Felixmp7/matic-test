@@ -6,10 +6,9 @@ import usePagination from './usePagination';
 
 type Props = {
     articles: Article_BM[],
-    mutateLatestArticles: () => void,
 }
 
-const ArticlesTable = ({ articles, mutateLatestArticles }: Props) => {
+const ArticlesTable = ({ articles }: Props) => {
     const { results, rowsPerPage } = useArticlesTable(articles);
     const { currentPage, totalPages, handleSetCurrentPage } = usePagination(articles, rowsPerPage);
 
@@ -18,7 +17,7 @@ const ArticlesTable = ({ articles, mutateLatestArticles }: Props) => {
     return (
         <>
             {resultsPerPage.length > 0 && (
-                <Table results={resultsPerPage} mutateLatestArticles={mutateLatestArticles} />
+                <Table results={resultsPerPage} />
             )}
             <div className="mt-12">
                 <Pagination

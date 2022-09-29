@@ -12,7 +12,6 @@ const ArticlesSection = () => {
         isLoading,
         showForm,
         openArticlesForm,
-        mutateLatestArticles,
     } = useArticles();
 
     return (
@@ -20,11 +19,8 @@ const ArticlesSection = () => {
             <SectionLayout sectionClassName="bg-[#f9f9f9]">
                 {showForm && (
                     <>
-                        <ArticleFormSection mutateLatestArticles={mutateLatestArticles} />
-                        <PreviousArticlesSection
-                            articles={allArticles}
-                            mutateLatestArticles={mutateLatestArticles}
-                        />
+                        <ArticleFormSection />
+                        <PreviousArticlesSection articles={allArticles} />
                     </>
                 )}
                 <LatestArticlesSection
