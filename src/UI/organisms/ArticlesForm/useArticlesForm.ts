@@ -2,10 +2,11 @@ import { useForm } from 'react-hook-form';
 import * as yup from 'yup';
 import { yupResolver } from '@hookform/resolvers/yup';
 import API from '@services/api';
-import { createSuccessResponseCode, generalSuccessResponseCode } from '@helpers/constants';
+import { createSuccessResponseCode, generalSuccessResponseCode, SWR_ARTICLES_KEY } from '@helpers/constants';
 import { FormArticle_ReqT } from '@services/api/clients/public/interfaces';
 import { useEffect } from 'react';
-import useArticleContext from '../../../templates/LatestArticles/hooks/useArticlesContext';
+import { mutate } from 'swr';
+import useArticleContext from '@templates/LatestArticles/hooks/useArticlesContext';
 
 const parseArticleData = (articleData: ArticleFormSchema):FormArticle_ReqT => ({
     author: articleData.author,
@@ -53,7 +54,7 @@ const validationSchema: yup.SchemaOf<ArticleFormSchema> = yup.object().shape({
     blogContent: yup.string().required(requiredFieldMessage),
 });
 
-const useArticlesForm = (mutateLatestArticles: () => void) => {
+const useArticlesForm = () => {
     const { defaultFormValues, setDefaultFormValues } = useArticleContext();
 
     const {
@@ -81,7 +82,7 @@ const useArticlesForm = (mutateLatestArticles: () => void) => {
 
         if (fetchSucceded) {
             reset();
-            mutateLatestArticles();
+            mutate(SWR_ARTICLES_KEY);
             setDefaultFormValues(undefined);
         }
     };

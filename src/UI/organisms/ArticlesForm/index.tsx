@@ -3,14 +3,13 @@ import TextAreaField from '@molecules/Fields/TextAreaField';
 import TextField from '@molecules/Fields/TextField';
 import useArticlesForm from './useArticlesForm';
 
-type Props = {
-    mutateLatestArticles: () => void,
-}
-
-const ArticleForm = ({ mutateLatestArticles }: Props) => {
+const ArticleForm = () => {
     const {
-        errors, isSubmitting, handleSubmit, register,
-    } = useArticlesForm(mutateLatestArticles);
+        errors,
+        isSubmitting,
+        handleSubmit,
+        register,
+    } = useArticlesForm();
 
     return (
         <form
