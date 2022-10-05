@@ -7,7 +7,7 @@ type Props = {
 }
 
 const LatestArticles = ({ articles, isLoading }: Props) => (
-    <div className="grid grid-cols-4 gap-10">
+    <div className="grid gap-10 mobileLg:grid-cols-2 place-items-center tabletLg:place-items-start tabletLg:grid-cols-4">
         {isLoading || !articles
             ? Array.from(Array(4).keys()).map((value) => (
                 <div key={value} className="overflow-hidden bg-white rounded-lg animate-pulse">

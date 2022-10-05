@@ -14,7 +14,7 @@ const LatestArticlesSection = ({
     articles, isLoading, isArticlesFormVisible, openArticlesForm,
 }: Props) => (
     <section className="bg-[#FAFAFA]">
-        <div className="flex items-center justify-between mb-[38px]">
+        <div className="flex flex-wrap items-center justify-between mb-[38px]">
             <SectionTitle title="Latest Articles" />
             {!isArticlesFormVisible && (
                 <PrimaryButton type="button" onClick={openArticlesForm}>

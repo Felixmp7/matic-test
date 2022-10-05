@@ -21,8 +21,8 @@ const Table = ({ results }: Props) => {
         setDefaultFormValues(defaultValues);
     };
     return (
-        <div className="w-full overflow-hidden border rounded-lg border-primary-gray-200">
-            <table className="w-full table-auto text-primary-gray-500">
+        <div className="overflow-x-scroll border rounded-lg border-primary-gray-200">
+            <table className="w-[918px] tabletXXl:w-full table-auto text-primary-gray-500">
                 <thead>
                     <tr className="h-10 text-left bg-primary-gray-400 text-[12px] leading-4 tracking-[0.05em] border-b">
                         <th className="py-3 pl-6 font-light">AUTHOR NAME</th>

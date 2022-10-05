@@ -7,7 +7,7 @@ const ArticleItem = ({
     content,
     title,
 }:Article_BM) => (
-    <article className="overflow-hidden bg-white rounded-lg">
+    <article className="overflow-hidden bg-white rounded-lg max-w-[248px]">
         <header className="relative w-full h-40">
             <Image
                 src={imageUrl}

@@ -27,6 +27,16 @@ module.exports = {
                 'primary-dark-blue': '#2D314E',
             },
         },
+        screens: {
+            mobile: '448px',
+            mobileLg: '532px',
+            mobileXl: '662px',
+            tablet: '768px',
+            tabletLg: '798px',
+            tabletXXl: '918px',
+            laptop: '1112px',
+            laptopLg: '1290px',
+        },
     },
     plugins: [
         require('@tailwindcss/line-clamp'),

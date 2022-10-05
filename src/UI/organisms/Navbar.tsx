@@ -22,13 +22,13 @@ const navLinks: NavLink[] = [
 const Navbar = () => {
     const { pathname } = useRouter();
     return (
-        <header className="flex items-center justify-between h-20 landing-container">
+        <header className="flex flex-wrap items-center justify-between h-20 landing-container">
             <Image
                 src={easyBankLogo}
                 width={141}
                 height={22}
             />
-            <nav className="space-x-[30px] h-full">
+            <nav className="hidden tablet:inline-block space-x-[30px] h-full">
                 {navLinks.map(({ linkName, path }) => {
                     const isActive = pathname === path;
 

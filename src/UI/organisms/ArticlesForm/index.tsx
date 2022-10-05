@@ -14,7 +14,7 @@ const ArticleForm = () => {
     return (
         <form
             onSubmit={handleSubmit}
-            className="w-[693px] mx-auto p-6 bg-white border rounded-3xl shadow mb-20"
+            className="tablet:w-[693px] mx-auto p-6 bg-white border rounded-3xl shadow mb-20"
         >
             <TextField
                 id="author-field"

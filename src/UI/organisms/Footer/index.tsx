@@ -6,16 +6,16 @@ import Link from 'next/link';
 import { socialLinks, footerLinks } from './helpers';
 
 const Footer = () => (
-    <footer className="w-full h-[190px] bg-primary-dark-blue py-14">
-        <div className="flex items-start justify-between h-full landing-container">
-            <div className="grid grid-cols-2 gap-x-20 text-[14px] leading-[18px]">
-                <div className="relative w-full h-full">
+    <footer className="w-full mobileXl:h-[190px] bg-primary-dark-blue py-14">
+        <div className="flex flex-col items-center h-full mobileXl:justify-between mobileXl:flex-row mobileXl:items-start landing-container">
+            <div className="grid mobileXl:grid-cols-2 gap-x-20 text-[14px] leading-[18px]">
+                <div className="relative w-full h-full text-center mobileXl:text-start">
                     <Image
                         src={easyBankLogo}
                         width={138.76}
                         height={19.7}
                     />
-                    <div className="absolute bottom-0 space-x-3 leading-none">
+                    <div className="my-6 space-x-3 leading-none mobileXl:my-0 mobileXl:absolute mobileXl:bottom-0">
                         {socialLinks.map((link) => (
                             <SocialMediaLink key={link.href} {...link} />
                         ))}
@@ -31,7 +31,7 @@ const Footer = () => (
                     ))}
                 </ul>
             </div>
-            <div className="pl-4 text-right">
+            <div className="mt-6 text-center mobileXl:mt-0 mobileXl:pl-4 mobileXl:text-right">
                 <PrimaryButton isActive />
                 <span
                     className="block text-white mt-7 -tracking-[0.01em]"

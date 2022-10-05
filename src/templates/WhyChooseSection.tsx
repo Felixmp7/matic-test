@@ -39,14 +39,14 @@ const options: ChooseOption[] = [
 const WhyChoose = () => (
     <SectionLayout sectionClassName="bg-[#F4F5F7]">
         <SectionTitle title="Why choose Easybank?" />
-        <p className="text-[17px] leading-[25px] text-primary-gray font-light mt-5">
+        <p className="text-base mobile:text-[17px] leading-[25px] text-primary-gray font-light mt-5">
             We leverage Open Banking to turn your bank acount into your financial hub.
             <br />
             {' '}
             Control your finances like never before.
         </p>
 
-        <div className="grid w-full grid-cols-4 gap-11 mt-[82px]">
+        <div className="grid w-full mobile:grid-cols-2 tabletLg:grid-cols-4 gap-11 mt-[82px]">
             {options.map((option, index) => (
                 <WhyChooseOption key={index} {...option} />
             ))}

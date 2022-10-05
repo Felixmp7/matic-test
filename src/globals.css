@@ -37,5 +37,12 @@ input:-webkit-autofill:active {
   .landing-container {
     max-width: 1112px;
     margin: auto;
+    padding: 0 2rem;
+  }
+
+  @media screen(laptop) {
+    .landing-container {
+      padding: 0;
+    }
   }
 }
