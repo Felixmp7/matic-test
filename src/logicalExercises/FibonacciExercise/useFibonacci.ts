@@ -2,7 +2,7 @@ import { useState } from 'react';
 
 const isPerfectSquare = (num: number) => {
     const square = parseInt(String(Math.sqrt(num)));
-    // eslint-disable-next-line eqeqeq
+    // eslint-disable-next-line
     return (square * square == num);
 };
 
